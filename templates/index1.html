@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> 1+1 페이지 </title>
+</head>
+<body onload = "view_result();">
+1+1은 <span id="res"></span>입니다!
+<script>
+var res = {{ calc_result|tojson }}
+function view_result(){
+    document.getElementById('res').innerHTML = res;
+}
+</script>
+</body>
+</html>

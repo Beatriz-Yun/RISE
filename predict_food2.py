@@ -9,7 +9,7 @@ os.environ['KMP_DUPLICATE_LIB_OK'] = 'True'
 
 
 
-def predict(fname):
+def predict_food(fname):
     # img = image.load_img(fname, target_size=input_shape[:2])
     # img = image.img_to_array(img)
 
@@ -44,5 +44,5 @@ def predict(fname):
 
 if __name__ == '__main__':
     file_name = 'test_image3.jpg'
-    results = predict(file_name)
+    results = predict_food(file_name)
     print(results)

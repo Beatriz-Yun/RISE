@@ -19,7 +19,7 @@ class Image(Resource):
                             action='append',
                             help='provide a file')
         args = parser.parse_args()
-        the_file = args['file']
+        the_file = args['image']
         # save a temporary copy of the file
         ofile, ofname = tempfile.mkstemp()
         the_file.save(ofname)
@@ -31,7 +31,7 @@ class Image(Resource):
 
         return output
 
-api.add_resource(Image, '/image')
+api.add_resource(Image, '/image/<string:fname>')
 
 if __name__ == '__main__':
     app.run(debug=True)
